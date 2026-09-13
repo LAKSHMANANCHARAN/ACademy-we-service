@@ -3148,6 +3148,20 @@ code, pre {
   }
 
   /* About & Comparison Table */
+  /* Keep the two About columns and their text inside the narrow viewport. */
+  .about-grid > div,
+  .about-lead,
+  .about-text {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .about-lead,
+  .about-text {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
   .about-stats-grid {
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
@@ -3163,22 +3177,45 @@ code, pre {
 
   .comparison-card {
     border-radius: 16px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     display: block;
   }
 
+  .comparison-header {
+    gap: 0.75rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .comparison-header span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-header span:last-child {
+    text-align: right;
+  }
+
   .comparison-table {
-    min-width: 440px;
+    min-width: 0;
     width: 100%;
+    table-layout: fixed;
     font-size: 0.82rem;
   }
 
   .comparison-table th, .comparison-table td {
-    padding: 0.65rem 0.75rem;
+    padding: 0.65rem 0.5rem;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    vertical-align: top;
+  }
+
+  .comparison-table th:first-child,
+  .comparison-table td:first-child {
+    width: 30%;
   }
 
   /* Founder Spotlight */
@@ -3382,5 +3419,4 @@ code, pre {
     font-size: 0.76rem;
   }
 }
-
 
