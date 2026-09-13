@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initCountdownTimer();
   initSyllabusModal();
+  initWelcomeOfferModal();
 });
 
 /* ==========================================================================
@@ -453,3 +454,36 @@ window.showToast = function(message, type = 'success') {
     setTimeout(() => toast.remove(), 400);
   }, 4000);
 };
+
+/* Welcome enrollment offer shown when the page opens */
+function initWelcomeOfferModal() {
+  const modal = document.getElementById('welcomeOfferModal');
+  const closeBtn = document.getElementById('welcomeOfferClose');
+
+  if (!modal) return;
+
+  const closeModal = () => {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  const openModal = () => {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
+  };
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  window.setTimeout(openModal, 450);
+}

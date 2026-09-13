@@ -3509,3 +3509,137 @@ code, pre {
     letter-spacing: 0.02em;
   }
 }
+/* Welcome enrollment offer */
+.welcome-offer-modal {
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(7px);
+}
+
+.welcome-offer-box {
+  position: relative;
+  width: min(100%, 560px);
+  max-width: 560px;
+  padding: 2.5rem;
+  border: 1px solid rgba(147, 197, 253, 0.45);
+  border-radius: 22px;
+  box-shadow: 0 28px 70px -28px rgba(15, 23, 42, 0.7);
+}
+
+.welcome-offer-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.welcome-offer-kicker {
+  display: inline-flex;
+  padding: 0.38rem 0.65rem;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.welcome-offer-title {
+  margin: 1rem 2.25rem 0.75rem 0;
+  color: var(--text-headline);
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+.welcome-offer-intro {
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.welcome-offer-benefits {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.welcome-offer-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.9rem;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #f8fbff;
+}
+
+.welcome-offer-icon {
+  display: inline-flex;
+  flex: 0 0 42px;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+.welcome-offer-icon-green {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 1.1rem;
+}
+
+.welcome-offer-benefit strong,
+.welcome-offer-benefit span {
+  display: block;
+}
+
+.welcome-offer-benefit strong {
+  color: var(--text-headline);
+  font-size: 0.92rem;
+}
+
+.welcome-offer-benefit span {
+  margin-top: 0.2rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+
+.welcome-offer-note {
+  margin: 1rem 0 0;
+  color: var(--text-light);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+[data-theme="dark"] .welcome-offer-kicker {
+  background: rgba(37, 99, 235, 0.18);
+  color: #93c5fd;
+}
+
+[data-theme="dark"] .welcome-offer-benefit {
+  border-color: rgba(147, 197, 253, 0.18);
+  background: rgba(15, 23, 42, 0.52);
+}
+
+@media (max-width: 640px) {
+  .welcome-offer-modal {
+    align-items: flex-end;
+    padding: 0.75rem;
+  }
+
+  .welcome-offer-box {
+    padding: 1.75rem 1.15rem;
+    border-radius: 18px;
+  }
+
+}
