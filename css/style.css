@@ -3420,3 +3420,92 @@ code, pre {
   }
 }
 
+
+/* Professional visual refinement */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #7c3aed;
+  --grad-primary: linear-gradient(135deg, #1d4ed8 0%, #2563eb 55%, #4f46e5 100%);
+  --grad-electric: linear-gradient(135deg, #1d4ed8 0%, #2563eb 55%, #4f46e5 100%);
+  --grad-orange-pink: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  --shadow-primary: 0 10px 22px -10px rgba(37, 99, 235, 0.65);
+  --shadow-orange: 0 10px 22px -10px rgba(234, 88, 12, 0.55);
+  --shadow-card-hover: 0 18px 34px -20px rgba(15, 23, 42, 0.35), 0 8px 16px -10px rgba(37, 99, 235, 0.18);
+}
+
+.section-tagline {
+  letter-spacing: 0.11em;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.section-title {
+  letter-spacing: -0.035em;
+}
+
+.navbar-sticky {
+  border-bottom-color: rgba(148, 163, 184, 0.22);
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+}
+
+.btn-primary,
+.btn-orange {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btn-primary:hover,
+.btn-orange:hover {
+  transform: translateY(-1px);
+}
+
+.benefit-card,
+.course-card,
+.comparison-card,
+.founder-card,
+.demo-form-card,
+.faq-item {
+  box-shadow: 0 10px 30px -24px rgba(15, 23, 42, 0.38);
+}
+
+.benefit-card:hover,
+.course-card:hover {
+  transform: translateY(-4px);
+}
+
+.course-card-header {
+  border-bottom: 1px solid rgba(226, 232, 240, 0.75);
+}
+
+.comparison-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  letter-spacing: 0.01em;
+}
+
+.comparison-table th {
+  color: #334155;
+  font-size: 0.78rem;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.faq-question-btn {
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .section-tagline {
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+  }
+
+  .comparison-table th {
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+  }
+}
